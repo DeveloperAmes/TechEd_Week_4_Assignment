@@ -21,9 +21,8 @@ app.post("/reviews", (req, res) => {
   const reviewsData = req.body.formValues;
   console.log(reviewsData);
   const query = dbPool.query(
-    `INSERT INTO reviews (name, date_visited, review) VALUES ($1, $2, $3)`[
-      (reviewsData.name, reviewsData.date_visited, reviewsData.review)
-    ]
+    `INSERT INTO reviews (name, date_visited, review) VALUES ($1, $2, $3)`,
+    [reviewsData.name, reviewsData.date_visited, reviewsData.review]
   );
   res.json({ status: "success", values: reviewsData });
 });
