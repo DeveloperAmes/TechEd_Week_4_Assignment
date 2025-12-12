@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gloock", serif;
+}
+
+.standard-styling-header-footer {
+  position: relative;
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: wrap;
+  gap: 50px;
+}
+
+#header-logo {
+  height: 20vh;
+  width: auto;
+}
+
+.main-styling {
+  height: 80vh;
+  color: #f7f7f7;
+  background-color: #494884;
+}
+
+.smaller-text {
+  letter-spacing: 0.05rem;
+}
