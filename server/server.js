@@ -27,6 +27,7 @@ app.post("/reviews", (req, res) => {
   res.json({ status: "success", values: reviewsData });
 });
 
-// app.get("/reviews", (req, res) => {
-//   res.json({ message: "Here are the reviews!" });
-// });
+app.get("/reviews", async (req, res) => {
+  console.log(await dbPool.query("select * from reviews"));
+  res.json({ message: "Here are the reviews!" });
+});
