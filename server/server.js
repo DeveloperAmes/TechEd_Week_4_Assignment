@@ -27,7 +27,8 @@ app.post("/reviews", (req, res) => {
 });
 
 app.get("/reviews", async (req, res) => {
-  res.json({ message: "Here are the reviews!" });
+  const apiData = await dbPool.query("select * from reviews");
+  res.json({ apiData });
 });
 
 // TODO: add actual status to post status
