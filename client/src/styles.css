@@ -30,3 +30,15 @@
 .smaller-text {
   letter-spacing: 0.05rem;
 }
+
+.submit-section {
+  border: 5px black solid;
+  width: 50vw;
+}
+
+#reviews-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

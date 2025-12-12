@@ -30,20 +30,31 @@
     </header>
     <main class="main-styling" class="main-container">
       <h1>Read Our Reviews</h1>
+      <section class="previous-reviews-section">
+          
+        </section>
+      <section class="submit-section">
       <form id="reviews-form">
         <h2>Submit Your Own Review</h2>
         <label for="name" class="smaller-text">Name:</label>
-        <input type="text" name="name" required />
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="First and last name"
+        />
         <label for="date_visited" class="smaller-text">Date Visited:</label>
         <input type="date" name="date_visited" required />
         <label for="review" class="smaller-text">Review:</label>
         <textarea
-          rows="5"
-          cols="20"
+          rows="10"
+          cols="30"
           name="review"
           placeholder="The Butterfly House is the best place in the world..."
+          required
         ></textarea>
         <button type="submit" class="smaller-text">Submit</button>
+        </section>
       </form>
     </main>
     <footer class="standard-styling-header-footer">
