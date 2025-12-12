@@ -19,15 +19,15 @@ app.get("/", (req, res) => {
 
 app.post("/reviews", (req, res) => {
   const reviewsData = req.body.formValues;
-  console.log(reviewsData);
   const query = dbPool.query(
     `INSERT INTO reviews (name, date_visited, review) VALUES ($1, $2, $3)`,
     [reviewsData.name, reviewsData.date_visited, reviewsData.review]
   );
-  res.json({ status: "success", values: reviewsData });
+  res.json({ status: "check", values: reviewsData });
 });
 
 app.get("/reviews", async (req, res) => {
-  console.log(await dbPool.query("select * from reviews"));
   res.json({ message: "Here are the reviews!" });
 });
+
+// TODO: add actual status to post status
