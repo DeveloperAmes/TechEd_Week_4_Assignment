@@ -2,16 +2,15 @@ console.log("Hello world");
 
 const reviewsForm = document.getElementById("reviews-form");
 
-async function handleFormSubmit(event) {
+function handleFormSubmit(event) {
   event.preventDefault();
   const formDataTemplate = new FormData(reviewsForm);
   const formValues = Object.fromEntries(formDataTemplate);
 
-  await fetch("https://teched-week-4-assignment-server.onrender.com/reviews", {
+  fetch("https://teched-week-4-assignment-server.onrender.com/reviews", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
     },
     body: JSON.stringify({ formValues }),
   });

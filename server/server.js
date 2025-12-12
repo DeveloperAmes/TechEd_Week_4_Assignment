@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Server is up and running!" });
 });
 
-app.post("/reviews", express.json(), (req, res) => {
+app.post("/reviews", (req, res) => {
   const reviewsData = req.body.formValues;
   const query = dbPool.query(
     `INSERT INTO reviews (name, date_visited, review) VALUES ($1, $2, $3)`[
