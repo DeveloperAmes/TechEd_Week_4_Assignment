@@ -8,7 +8,7 @@ async function handleFormSubmit(event) {
   const formValues = Object.fromEntries(formDataTemplate);
   console.log(formValues);
 
-  await fetch("https://teched-week-4-assignment.onrender.com/reviews", {
+  await fetch("https://teched-week-4-assignment-server.onrender.com/reviews", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

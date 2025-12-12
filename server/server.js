@@ -28,5 +28,5 @@ app.post("/reviews", (req, res) => {
       (reviewsData.name, reviewsData.date_visited, reviewsData.review)
     ]
   );
-  res.json({ message: "Testimonial received!" });
+  res.json({ message: "Review received!" });
 });
