@@ -24,9 +24,9 @@ app.post("/reviews", (req, res) => {
       (reviewsData.name, reviewsData.date_visited, reviewsData.review)
     ]
   );
-  res.json({ message: "Review received!" });
+  res.json({ status: "success", values: reviewsData });
 });
 
-app.get("/reviews", (req, res) => {
-  res.json({ message: "Here are the reviews!" });
-});
+// app.get("/reviews", (req, res) => {
+//   res.json({ message: "Here are the reviews!" });
+// });
