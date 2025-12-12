@@ -18,3 +18,16 @@ function handleFormSubmit(event) {
 }
 
 reviewsForm.addEventListener("submit", handleFormSubmit);
+
+async function getReviewsData() {
+  const response = await fetch(
+    "https://teched-week-4-assignment-server.onrender.com/reviews"
+  );
+  const apiData = await response.json();
+  const wrangledReview = apiData[i].review;
+  const wrangledName = apiData[i].name;
+  return wrangledReview;
+  return wrangledName;
+}
+
+getReviewsData();
