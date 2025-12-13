@@ -27,7 +27,7 @@ app.post("/reviews", (req, res) => {
 });
 
 app.get("/reviews", async (req, res) => {
-  const apiData = await dbPool.query("select * from reviews");
+  const apiData = await dbPool.query("SELECT * FROM reviews");
   res.json({ apiData });
 });
 
