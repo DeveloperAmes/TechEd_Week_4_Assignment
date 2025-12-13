@@ -4,12 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <script src="./src/app.js" type="module" defer></script>
     <title>Butterfly House Visitor Reviews</title>
@@ -21,12 +18,15 @@
         src="./media/images/ButterflyHouseLogoNoBckgrnd.png"
         alt="The Butterfly House Lincolnshire written in purple with a cartoon butterfly. This is the company logo."
       />
-      <nav>
-        <a class="header-nav" class="smaller-text" href="#">About Us</a>
-        <a class="header-nav" class="smaller-text" href="#">Plan Your Visit</a>
-        <a class="header-nav" class="smaller-text" href="#">Contact Us</a>
-        <a class="header-nav" class="smaller-text" href="#">Support Us</a>
-      </nav>
+      <div class="dropdown-menu-nav">
+        <a class="nav-link" class="dropdown"  href="#">Menu</a>
+        <nav>
+          <a class="nav-link"  class="header-nav" href="#">About Us</a>
+          <a class="nav-link"  class="header-nav" href="#">Plan Your Visit</a>
+          <a class="nav-link"  class="header-nav" href="#">Contact Us</a>
+          <a class="nav-link"  class="header-nav" href="#">Support Us</a>
+        </nav>
+      </div>
     </header>
     <main class="main-styling" class="main-container">
       <h1>Read Our Reviews</h1>
@@ -35,30 +35,35 @@
         </section>
       <section class="submit-section">
       <form id="reviews-form">
-        <h2>Submit Your Own Review</h2>
-        <label for="name" class="smaller-text">Name:</label>
+        <h3>Visited Us? Share Your Thoughts!</h3>
+        <label for="name" >Name:</label>
         <input
           type="text"
           name="name"
           required
           placeholder="First and last name"
         />
-        <label for="date_visited" class="smaller-text">Date Visited:</label>
+        <label for="date_visited" >Date Visited:</label>
         <input type="date" name="date_visited" required />
-        <label for="review" class="smaller-text">Review:</label>
+        <label for="review" >Review:</label>
         <textarea
           rows="10"
-          cols="30"
+          cols="25"
           name="review"
           placeholder="The Butterfly House is the best place in the world..."
           required
         ></textarea>
-        <button type="submit" class="smaller-text">Submit</button>
+        <button type="submit" >Submit</button>
         </section>
       </form>
     </main>
     <footer class="standard-styling-header-footer">
-      some stuff in the footer
+       <nav class="links">
+        <a class="nav-link" href="#">Terms and Conditions</a>
+        <a class="nav-link" href="#">Cookie Policy</a>
+        <a class="nav-link" href="#">Help and Support</a>
+        <a class="nav-link" href="#">FAQs</a>
+      </nav>
     </footer>
   </body>
 </html>

@@ -25,14 +25,34 @@ renderPreviousReviews();
 
 function createPreviousReviewElements(data) {
   for (let i = 0; i < data.length; i++) {
-    let previousReviewHeading = document.createElement("h3");
+    let previousReviewHeading = document.createElement("h2");
     let previousReviewContent = document.createElement("p");
     previousReviewHeading.innerHTML = `${data[i].name}`;
+    previousReviewHeading.className = "previous-review-name";
     previousReviewSection.appendChild(previousReviewHeading);
-    previousReviewContent.innerHTML = `${data[i].review}`;
+    previousReviewContent.innerHTML = `"${data[i].review}"`;
+    previousReviewContent.className = "previous-review";
     previousReviewSection.appendChild(previousReviewContent);
   }
 }
+
+// function loadReview(review) {
+//   let mainReview = review
+
+// }
+
+// function createPrevNextButtons() {
+//   const prevBtn = document.createElement("a");
+//   prevBtn.innerHTML = "&#10094";
+//   prevBtn.className = "prev";
+//   previousReviewSection.appendChild(prevBtn);
+//   const nextBtn = document.createElement("a");
+//   nextBtn.innerHTML = "&#10095";
+//   nextBtn.className = "next";
+//   previousReviewSection.appendChild(nextBtn);
+// }
+
+// createPrevNextButtons();
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -46,7 +66,8 @@ function handleFormSubmit(event) {
     },
     body: JSON.stringify({ formValues }),
   });
-  console.log(formValues);
+
+  reviewsForm.reset();
 }
 
 reviewsForm.addEventListener("submit", handleFormSubmit);

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gloock", serif;
+  font-family: "Figtree", sans-serif;
 }
 
 .standard-styling-header-footer {
@@ -16,24 +16,44 @@
   gap: 50px;
 }
 
+h1,
+h3 {
+  margin: 1rem 0;
+}
+
+h2,
+label,
+input {
+  margin: 0.2rem 0;
+}
+
+p {
+  margin: 0.5rem 0 2rem 0;
+}
+
 #header-logo {
-  height: 20vh;
+  height: 16vh;
   width: auto;
 }
 
 .main-styling {
-  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #f7f7f7;
+  text-align: center;
   background-color: #494884;
 }
 
-.smaller-text {
-  letter-spacing: 0.05rem;
+.submit-section {
+  background-color: rgba(141, 139, 255, 0.5);
+  width: 60vw;
+  margin-bottom: 1rem;
+  border-radius: 2px;
 }
 
-.submit-section {
-  border: 5px black solid;
-  width: 50vw;
+.nav-link {
+  text-decoration: none;
 }
 
 #reviews-form {
@@ -41,4 +61,43 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* .dropdown {
+  position: relative;
+} */
+
+.header-nav {
+  display: none;
+}
+
+/* .prev,
+.next {
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+} */
+
+#previous-reviews-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+}
+
+input,
+textarea {
+  background-color: #f7f7f7;
+  color: #494884;
+}
+
+button {
+  margin: 0.5rem 0;
+  font-family: "Figtree", sans-serif;
+  background-color: #f7f7f7;
+  padding: 0.5rem 1rem;
 }
