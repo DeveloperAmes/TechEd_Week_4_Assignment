@@ -10,7 +10,8 @@ async function getReviewsData() {
   );
   const apiData = await response.json();
   const wrangledRows = apiData.apiData.rows;
-  return wrangledRows;
+  const slicedData = wrangledRows.slice(-5);
+  return slicedData;
 }
 
 const apiRows = await getReviewsData();
@@ -36,24 +37,6 @@ function createPreviousReviewElements(data) {
   }
 }
 
-// function loadReview(review) {
-//   let mainReview = review
-
-// }
-
-// function createPrevNextButtons() {
-//   const prevBtn = document.createElement("a");
-//   prevBtn.innerHTML = "&#10094";
-//   prevBtn.className = "prev";
-//   previousReviewSection.appendChild(prevBtn);
-//   const nextBtn = document.createElement("a");
-//   nextBtn.innerHTML = "&#10095";
-//   nextBtn.className = "next";
-//   previousReviewSection.appendChild(nextBtn);
-// }
-
-// createPrevNextButtons();
-
 function handleFormSubmit(event) {
   event.preventDefault();
   const formDataTemplate = new FormData(reviewsForm);
@@ -66,8 +49,15 @@ function handleFormSubmit(event) {
     },
     body: JSON.stringify({ formValues }),
   });
-
   reviewsForm.reset();
 }
 
 reviewsForm.addEventListener("submit", handleFormSubmit);
+reviewsForm.addEventListener("submit", function () {
+  reviewsForm.style.display = "none";
+  const thanksMessageDisplay = document.querySelector(".submit-section");
+  const displayMessage = document.createElement("h4");
+  displayMessage.innerHTML =
+    "Thank you for sharing your views with us! Refresh the page to see your published review!";
+  thanksMessageDisplay.appendChild(displayMessage);
+});

@@ -71,16 +71,6 @@ p {
   display: none;
 }
 
-/* .prev,
-.next {
-  cursor: pointer;
-}
-
-.next {
-  position: absolute;
-  right: 0;
-} */
-
 #previous-reviews-section {
   display: flex;
   flex-direction: column;
