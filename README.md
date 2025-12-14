@@ -1,30 +1,30 @@
-# What requirements did you achieve?
+### What requirements did you achieve?
 
 I believe I have achieved all of the standard requirements and a couple of the stretch goals.
 
-# Were there any requirements or goals that you were unable to achieve?
+### Were there any requirements or goals that you were unable to achieve?
 
 I did look into the stretch goal of adding a like button to the reviews, but I feel I wouldn't have had enough time to implement this.
 
-# If so, what was it that you found difficult about these tasks?
+### If so, what was it that you found difficult about these tasks?
 
 I was just limited on time to be able to implement every single one of the stretch goals. Some of the ideas that I had but could not implement (see below) took a long time to try and configure before I gave up with them.
 
-**Additional reflections:**
+## **Additional reflections:**
 
-# What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
+### What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
 
 - MDN
 - CSS-Tricks (grid layout)
 - W3Schools
 
-# What errors or bugs did you encounter while completing your assignment? How did you solve them?
+### What errors or bugs did you encounter while completing your assignment? How did you solve them?
 
 After I had initially set up my server, client and database, I got stuck for a really long time on not being able to send my submitted form data to my database. Bertie went through lots of different things with me, and thankfully identified that it was a syntax error in the end. I had accidentally added an extra pair of brackets in the POST request of my server.js file.
 
 I had another issue with wrangling the correct data from my server, as the data array that I wanted was inside an object called rows, which was nested into an object named apiData which was nested in another object called apiData. I initially had to console log everything to try and wrangle the specific data set that I wanted, which I could then use for my for loop.
 
-# What went really well and what could have gone better?
+### What went really well and what could have gone better?
 
 One of the things I'm not really sure about is why the reviews from the database take so long to load on the page. I'm not sure if it's maybe just my laptop or internet connection being slow, or it will do that for everyone. It took as long as 10 seconds to load one time.
 
