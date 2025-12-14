@@ -5,15 +5,17 @@
   font-family: "Figtree", sans-serif;
 }
 
-.standard-styling-header-footer {
+.styling-header-footer {
   position: relative;
   width: 100%;
   background-color: #f7f7f7;
+  font-size: 0.8rem;
+}
+
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: wrap;
-  gap: 50px;
 }
 
 h1,
@@ -31,6 +33,16 @@ p {
   margin: 0.5rem 0 2rem 0;
 }
 
+ul {
+  list-style: none;
+}
+
+ul li a {
+  color: #494884;
+  font-weight: bold;
+  padding: 0.6rem 0;
+}
+
 #header-logo {
   height: 16vh;
   width: auto;
@@ -46,14 +58,36 @@ p {
 }
 
 .submit-section {
+  min-width: 260px;
   background-color: rgba(141, 139, 255, 0.5);
   width: 60vw;
   margin-bottom: 1rem;
   border-radius: 2px;
 }
 
+button:hover {
+  background-color: #494884;
+  color: #f7f7f7;
+  border: solid 2px #f7f7f7;
+}
+
 .nav-link {
   text-decoration: none;
+}
+
+.nav-link:hover {
+  color: rgb(141, 139, 255);
+}
+
+li {
+  padding: 0 0.7rem;
+}
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  justify-content: space-evenly;
 }
 
 #reviews-form {
@@ -63,12 +97,16 @@ p {
   align-items: center;
 }
 
-/* .dropdown {
-  position: relative;
-} */
-
-.header-nav {
-  display: none;
+.thanks-container {
+  margin: 9vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  background-color: rgba(141, 139, 255, 0.5);
+  width: 75vw;
+  font-size: 1.4rem;
 }
 
 #previous-reviews-section {
@@ -83,6 +121,8 @@ input,
 textarea {
   background-color: #f7f7f7;
   color: #494884;
+  border: #494884 solid 2px;
+  font-size: 1rem;
 }
 
 button {
@@ -90,4 +130,64 @@ button {
   font-family: "Figtree", sans-serif;
   background-color: #f7f7f7;
   padding: 0.5rem 1rem;
+  color: #494884;
+  font-weight: bold;
+}
+footer {
+  height: 6vh;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (min-width: 600px) {
+  .header-nav {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    width: 35vw;
+  }
+  #previous-reviews-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    column-gap: 1.1rem;
+    width: 75vw;
+  }
+  div {
+    align-self: start;
+  }
+  footer {
+    height: 5vh;
+  }
+  .footer-nav {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  label {
+    font-size: 1.3rem;
+    width: 35vw;
+    text-align: left;
+  }
+  input {
+    height: 2rem;
+  }
+  .thanks-container {
+    height: 17vh;
+  }
 }

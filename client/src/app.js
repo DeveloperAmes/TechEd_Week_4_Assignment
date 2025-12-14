@@ -10,7 +10,7 @@ async function getReviewsData() {
   );
   const apiData = await response.json();
   const wrangledRows = apiData.apiData.rows;
-  const slicedData = wrangledRows.slice(-5);
+  const slicedData = wrangledRows.slice(-6);
   return slicedData;
 }
 
@@ -26,14 +26,16 @@ renderPreviousReviews();
 
 function createPreviousReviewElements(data) {
   for (let i = 0; i < data.length; i++) {
+    let reviewContainer = document.createElement("div");
     let previousReviewHeading = document.createElement("h2");
     let previousReviewContent = document.createElement("p");
     previousReviewHeading.innerHTML = `${data[i].name}`;
+    previousReviewSection.appendChild(reviewContainer);
     previousReviewHeading.className = "previous-review-name";
-    previousReviewSection.appendChild(previousReviewHeading);
+    reviewContainer.appendChild(previousReviewHeading);
     previousReviewContent.innerHTML = `"${data[i].review}"`;
     previousReviewContent.className = "previous-review";
-    previousReviewSection.appendChild(previousReviewContent);
+    reviewContainer.appendChild(previousReviewContent);
   }
 }
 
@@ -56,8 +58,10 @@ reviewsForm.addEventListener("submit", handleFormSubmit);
 reviewsForm.addEventListener("submit", function () {
   reviewsForm.style.display = "none";
   const thanksMessageDisplay = document.querySelector(".submit-section");
+  thanksMessageDisplay.className = "thanks-container";
   const displayMessage = document.createElement("h4");
+  displayMessage.className = "thanks-message";
   displayMessage.innerHTML =
-    "Thank you for sharing your views with us! Refresh the page to see your published review!";
+    "Thank you for sharing your views with us! <br> Refresh the page to see your published review!";
   thanksMessageDisplay.appendChild(displayMessage);
 });
